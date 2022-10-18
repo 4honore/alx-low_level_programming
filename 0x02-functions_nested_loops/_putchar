@@ -1,0 +1,10 @@
+#include <unistd.h>
+/**
+  * _putchar - our write the character
+  * @c: character
+  * Return: Always success
+*/
+int _putchar(char c)
+{
+return (write(1 ,&c ,1);
+}
