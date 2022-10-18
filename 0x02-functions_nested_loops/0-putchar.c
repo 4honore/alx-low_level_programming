@@ -1,7 +1,7 @@
-#include <stdio.h>
+#iclude "main.h"
 /**
- * main - ever program must contain main function
- * Return: always ruturn 0
+ * main - all programs must contain main function
+ * Return: Always 0
  */
 int main(void)
 {
@@ -17,3 +17,4 @@ int main(void)
 
 	return (0);
 }
+
