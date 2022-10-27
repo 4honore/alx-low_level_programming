@@ -1,21 +1,25 @@
 #include "main.h"
 /**
- * print_number - Prints an integer.
- * @n: The integer to be printed.
+ * _strncpy - Copies at most an inputted number
+ * of bytes from string src into dest.
+ * @dest: The buffer storing the string copy.
+ * @src: The source string.
+ * @n: The maximum number of bytes to copied from src.
+ * Return: A pointer to the resulting string dest.
  */
-void print_number(int n)
+char *_strncpy(char *dest, char *src, int n)
 {
-	unsigned int num = n;
+	int index = 0, src_len = 0;
 
-	if (n < 0)
-	{
-		_putchar('-');
-		num = -num;
-	}
+	while (src[index++])
+		src_len++;
 
-	if ((num / 10) > 0)
-		print_number(num / 10);
+	for (index = 0; src[index] && index < n; index++)
+		dest[index] = src[index];
 
-	_putchar((num % 10) + '0');
+	for (index = src_len; index < n; index++)
+		dest[index] = '\0';
+
+	return (dest);
 }
 
